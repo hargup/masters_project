@@ -121,7 +121,6 @@ $endif$
 $if(tables)$
 \usepackage{longtable,booktabs}
 $endif$
-$if(graphics)$
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -131,7 +130,6 @@ $if(graphics)$
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-$endif$
 $if(links-as-notes)$
 % Make links footnotes instead of hotlinks:
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
@@ -207,14 +205,69 @@ $endif$
 \date{$date$}
 
 \begin{document}
-$if(title)$
-\maketitle
-$endif$
-$if(abstract)$
-\begin{abstract}
+\title{$title$}
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+
+        \Huge
+        \textbf{$title$}
+
+        \vspace{0.5cm}
+        \Large
+
+
+        \vspace{1.5cm}
+
+        $author-meta$\\
+        \vspace{0.5cm}
+        12MA20017
+        \vspace{0.5cm}
+        \\
+        \textit{under the supervision of}\\\textbf{Dr. Ratna Dutta}
+
+        \vfill
+       % \includegraphics[scale=0.6]{iit_logo}
+
+        \Large
+        Indian Institute of Technology\\
+        Kharagpur, India
+
+    \end{center}
+\end{titlepage}
+
+\section*{\Large Certificate}
+\vspace{1cm}
+This is to certify that the project titled "Divisibility Sequences" submitted by Pranshu Gupta, Roll No: 15MA40015 during 2016-2017, in partial fulfillment of the degree of M.Sc. in Mathematics to the Indian Institute of Technology Kharagpur, is a bonafide record of the work carried out under my supervision and guidance. This report fulfills all the requirements as per regulations of the institute and has not been submitted to any other institute/university for any degree or diploma.
+\vspace{2cm}
+
+\begin{flushleft}
+Dr. P V S N Murthy\\
+Associate Professor\\
+Department of Mathematics\\
+IIT Kharagpur
+\end{flushleft}
+
+\begin{flushright}
+Prof. Shreya Matilal \\
+Assitant Professor\\
+Rajiv Gandhi School of\\ Intellectual Property Law\\
+IIT Kharagpur
+\end{flushright}
+
+\newpage
+\newpage
+\section*{\Large Acknowledgement}
+\vspace{1cm}
+
+Blah Blah
+
+
+\newpage
+\section*{\large Abstract}
+\vspace{1cm}
 $abstract$
-\end{abstract}
-$endif$
+
 
 $for(include-before)$
 $include-before$
