@@ -122,6 +122,10 @@ $if(tables)$
 \usepackage{longtable,booktabs}
 $endif$
 \usepackage{graphicx,grffile}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{framed}
+\colorlet{shadecolor}{lightgray}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -204,6 +208,14 @@ $if(institute)$
 $endif$
 \date{$date$}
 
+%====
+\def\signature#1#2{\parbox[b]{1in}{\smash{#1}\vskip12pt}
+\hfill \parbox[t]{2.8in}{\shortstack{\vrule width 2.8in height 0.4pt\\\small#2}}}
+\def\sigskip{\vskip0.4in plus 0.1in}
+        \def\beginskip{\vskip0.5875in plus 0.1in}
+
+%====
+
 \begin{document}
 \title{$title$}
 \begin{titlepage}
@@ -224,7 +236,8 @@ $endif$
         12MA20017
         \vspace{0.5cm}
         \\
-        \textit{under the supervision of}\\\textbf{Dr. Ratna Dutta}
+        \textit{under the supervision of}\\\textbf{Dr. PVSN Murthy}\\ and
+        \\\textbf{Prof. Shreya Matilal}
 
         \vfill
        % \includegraphics[scale=0.6]{iit_logo}
@@ -238,22 +251,22 @@ $endif$
 
 \section*{\Large Certificate}
 \vspace{1cm}
-This is to certify that the project titled "Divisibility Sequences" submitted by Pranshu Gupta, Roll No: 15MA40015 during 2016-2017, in partial fulfillment of the degree of M.Sc. in Mathematics to the Indian Institute of Technology Kharagpur, is a bonafide record of the work carried out under my supervision and guidance. This report fulfills all the requirements as per regulations of the institute and has not been submitted to any other institute/university for any degree or diploma.
+This is to certify that the project titled "$title$" submitted by
+$author-meta$, Roll No: 12MA20017 during 2016-2017, in partial fulfillment of
+the degree of Integrated M.Sc. in Mathematics and Computing to the Indian Institute of Technology Kharagpur, is a bonafide record of the work carried out under my supervision and guidance. This report fulfills all the requirements as per regulations of the institute and has not been submitted to any other institute/university for any degree or diploma.
 \vspace{2cm}
 
-\begin{flushleft}
-Dr. P V S N Murthy\\
-Associate Professor\\
-Department of Mathematics\\
-IIT Kharagpur
-\end{flushleft}
-
-\begin{flushright}
-Prof. Shreya Matilal \\
-Assitant Professor\\
-Rajiv Gandhi School of\\ Intellectual Property Law\\
-IIT Kharagpur
-\end{flushright}
+{\singlespace
+\hspace{-40pt}
+\begin{minipage}[l]{2in}
+    \sigskip \signature{}{Dr. PVSN  Murthy\\ Department of Mathematics \\ IIT
+    Khragpur }
+\end{minipage}
+\hfill
+\begin{minipage}[r]{2in}
+    \sigskip \signature{}{Prof. Shreya Matilal\\ RGSOIPL \\ IIT Kharagpur}
+\end{minipage}}
+\vfill
 
 \newpage
 \newpage
@@ -268,6 +281,12 @@ Blah Blah
 \vspace{1cm}
 $abstract$
 
+
+\newpage
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
 
 $for(include-before)$
 $include-before$
