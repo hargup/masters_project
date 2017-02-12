@@ -335,7 +335,9 @@ Equality here doesn't mean that every citizen should be treated in the exact
 same matter but is understood as similarly situated persons should be treated
 similarly. This notion if equality is similar to the one used by Friedler et.
 al. To determine when State can make different treatment, the Courts have
-formulated what is called the test of reasonable classification. The State can
+formulated what is called the test of
+
+reasonable classification. The State can
 treat two persons differently only if:
 
 1. There is an intelligible differential between the two persons
